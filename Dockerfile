@@ -1,9 +1,10 @@
-FROM alpine:3.10.2
+FROM alpine:3.15
 
 ENV BASE_URL="https://get.helm.sh"
 
 ENV HELM_2_FILE="helm-v2.17.0-linux-amd64.tar.gz"
 ENV HELM_3_FILE="helm-v3.5.0-linux-amd64.tar.gz"
+
 
 RUN echo "@edge-main http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories && \
     apk update &&  apk add --no-cache ca-certificates \
